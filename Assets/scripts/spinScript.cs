@@ -4,6 +4,7 @@ using System.Collections;
 public class spinScript : MonoBehaviour {
 
 	public GUIText cubeText;
+	public GUIText messText;
 
 	public int speed;
 	public int spinDuration;
@@ -26,6 +27,11 @@ public class spinScript : MonoBehaviour {
 		long duration = (long) Time.time - startTime;
 		checkForExit (duration);
 
+	}
+
+	void JavaMessage(string message) { 
+		Debug.Log("PRA, message from java: " + message); 
+		messText.text = message;
 	}
 
 	void checkForExit(long duration){
